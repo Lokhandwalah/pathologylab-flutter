@@ -1,10 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-void main() => runApp(MaterialApp(
+void main() async {
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: HomePage(),
-    ));
+    );
+  }
+}
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,7 +46,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               onPressed: _signInWithGoogle,
-              Color: Colors.black,
             )
           ],
         )));
