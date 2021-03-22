@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "302144031109-a8vp22u62mdigp63ndnvkunaaluiuje4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.shubhamdev.pathologylab",
+            "certificate_hash": "72b3c94029ae15a3eb339a10f3b894d86fd3297e"
+          }
+        },
+        {
+          "client_id": "302144031109-td8nnuuui8k3fq6cfuiho4ovnee63tha.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.shubhamdev.pathologylab",
+            "certificate_hash": "dd17f42ec91def2f412c83bb9a6af77b47523605"
+          }
+        },
+        {
           "client_id": "302144031109-6g61lmaonv9171fsshevc75jh7jfkaql.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pathologylab/models/user.dart';
+import 'package:pathologylab/screens/auth_screen.dart';
+import 'package:pathologylab/screens/home_screen.dart';
+import 'package:pathologylab/services/authentication.dart';
 
 class SplashScreen extends StatelessWidget {
   @override
@@ -11,10 +15,13 @@ class SplashScreen extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: Center(child: FlutterLogo()),
+            child: Center(
+                child: FlutterLogo(
+              size: 100,
+            )),
           ),
           Positioned(
-            bottom: 20,
+            bottom: 100,
             child: CircularProgressIndicator(),
           )
         ],
@@ -24,7 +31,16 @@ class SplashScreen extends StatelessWidget {
 
   void navigateForward(BuildContext context) async {
     await Future.delayed(Duration(seconds: 2));
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (_) => Container(),),);
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) {
+        if (AuthService().isUserLoggedIn) {
+          User user = User(
+              email: AuthService().currentUser.email,
+              name: AuthService().currentUser.displayName);
+          return HomePage(user: user);
+        }
+        return AuthScreen();
+      }),
+    );
   }
 }

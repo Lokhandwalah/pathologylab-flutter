@@ -16,10 +16,11 @@ class AuthService extends BaseAuth {
 
   @override
   Future<my_user.User> googleSignIn() async {
-    final GoogleSignInAccount googleUser = await GoogleSignIn()
-        .signIn()
-        .catchError((error) =>
-            throw Exception("Problem with Google Signin: " + error.toString()));
+    final GoogleSignInAccount googleUser =
+        await GoogleSignIn().signIn().catchError((error) {
+      print(error.toString());
+      throw Exception("Problem with Google Signin: " + error.toString());
+    });
     final GoogleSignInAuthentication googleAuth =
         await googleUser.authentication;
     final GoogleAuthCredential credential = GoogleAuthProvider.credential(
@@ -37,5 +38,8 @@ class AuthService extends BaseAuth {
   }
 
   @override
-  Future<void> signOut() async => await _auth.signOut();
+  Future<void> signOut() async {
+    await GoogleSignIn().signOut();
+    await _auth.signOut();
+  }
 }

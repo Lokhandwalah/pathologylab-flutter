@@ -14,13 +14,13 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Sign'),
+          title: Text('Sign-in'),
         ),
         body: Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextButton(
+            ElevatedButton(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(

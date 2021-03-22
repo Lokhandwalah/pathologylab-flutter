@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Welcome, ${widget.user.name}'),
+        title: Text('Welcome, ${widget.user.firstName}'),
       ),
       body: Center(
           child: ElevatedButton(
