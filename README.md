@@ -1,6 +1,6 @@
 # pathologylab
 
-A new Flutter application.
+Welcome 
 
 ## Getting Started
 
