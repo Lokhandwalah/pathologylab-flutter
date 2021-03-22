@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "302144031109",
+    "project_id": "pathology-lab-cfddb",
+    "storage_bucket": "pathology-lab-cfddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:302144031109:android:30ae98b08366181fb61cec",
+        "android_client_info": {
+          "package_name": "org.shubhamdev.pathologylab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "302144031109-6g61lmaonv9171fsshevc75jh7jfkaql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcCCkgb12tewPuUof4h9-HoC1CFV3wlKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "302144031109-6g61lmaonv9171fsshevc75jh7jfkaql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
